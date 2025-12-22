@@ -1,95 +1,207 @@
-export default function Home() {
+'use client'
+
+import { useState } from 'react'
+import { Dialog, DialogPanel } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import Footer from "./components/Footer"
+import AppCTA from "./components/AppCTA"
+import FAQ from "./components/FAQ"
+import Avis from "./components/Avis"
+import Stats from "./components/Stats"
+import Fonctionnalites from "./components/Fonctionnalites"
+import Tarifs from "./components/Tarifs"
+import Contact from "./components/Contact"
+
+const navigation = [
+    { name: 'Accueil', href: '#' },
+  { name: 'Application', href: '#fonctionnalites' },
+  { name: 'FAQ', href: '#faq' },
+  { name: 'Tarifs', href: '#tarifs' },
+  { name: 'Contact', href: '#contact' },
+]
+
+export default function Example() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-900">
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
-        <header className="text-center mb-20 pt-8">
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-3xl bg-gradient-to-br from-[#215B87] to-[#e18343] mb-8 shadow-lg">
-            <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    <>
+    <div className="bg-gray-900">
+      <header className="fixed bg-gray-900 absolute inset-x-0 top-0 z-50">
+        <nav aria-label="Global" className=" flex items-center justify-between p-6 lg:px-8">
+          <div className="flex lg:flex-1">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                alt=""
+                src="https://res.cloudinary.com/dwxgvbcwe/image/upload/v1765577735/Gemini_Generated_Image_p98ia4p98ia4p98i_1_-removebg-preview_wk0aqm.png"
+                className="h-32 w-auto ml-24"
+              />
+            </a>
+          </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            >
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon aria-hidden="true" className="size-6" />
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:gap-x-12">
+            {navigation.map((item) => (
+              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+         
+          </div>
+        </nav>
+        <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+          <div className="fixed inset-0 z-50" />
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+            <div className="flex items-center justify-between">
+              <a href="#" className="-m-1.5 p-1.5">
+                <span className="sr-only">Your Company</span>
+                <img
+                  alt=""
+                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  className="h-8 w-auto"
+                />
+              </a>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(false)}
+                className="-m-2.5 rounded-md p-2.5 text-gray-200"
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon aria-hidden="true" className="size-6" />
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-white/10">
+                <div className="space-y-2 py-6">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="py-6">
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                  >
+                    Log in
+                  </a>
+                </div>
+              </div>
+            </div>
+          </DialogPanel>
+        </Dialog>
+      </header>
+
+      <div className="relative isolate pt-14">
+        <svg
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-white/10"
+        >
+          <defs>
+            <pattern
+              x="50%"
+              y={-1}
+              id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+              width={200}
+              height={200}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y={-1} className="overflow-visible fill-gray-800/50">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              strokeWidth={0}
+            />
+          </svg>
+          <rect fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" width="100%" height="100%" strokeWidth={0} />
+        </svg>
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
+            <div className="flex">
+              <div className="relative flex items-center gap-x-4 rounded-full bg-white/5 px-4 py-1 text-sm/6 text-gray-300 ring-1 ring-white/10 hover:ring-white/20">
+                <span className="font-semibold text-indigo-400">Version</span>
+                <span aria-hidden="true" className="h-4 w-px bg-white/10" />
+                <a href="#" className="flex items-center gap-x-1">
+                  <span aria-hidden="true" className="absolute inset-0" />
+                  1.0
+                </a>
+              </div>
+            </div>
+            <h1 className="mt-10 text-5xl font-semibold tracking-tight text-pretty text-white sm:text-7xl">
+              Accélérez la vente de vos vêtements.
+            </h1>
+            <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+                  Fini de perdre du temps à poster vos annonces. Avec l'application Fripe Scan, publiez en un clin d'oeil vos annonces de vêments sur les principaux sites d'annonces dans le monde ! 
+            </p>
+            <div className="mt-10 flex items-center gap-x-6">
+              <a
+                href="#downloads"
+                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              >
+                Téléchargements
+              </a>
+              <a href="#fonctionnalites" className="text-sm/6 font-semibold text-white">
+                En savoir plus <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
+            <svg role="img" viewBox="0 0 366 729" className="mx-auto w-91.5 max-w-full drop-shadow-xl">
+              <title>App screenshot</title>
+              <defs>
+                <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
+                  <rect rx={36} width={316} height={684} />
+                </clipPath>
+              </defs>
+              <path
+                d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+                fill="#4B5563"
+              />
+              <path
+                d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+                fill="#343E4E"
+              />
+              <foreignObject
+                width={316}
+                height={684}
+                clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
+                transform="translate(24 24)"
+              >
+                <img alt="" src="https://tailwindcss.com/plus-assets/img/component-images/mobile-app-screenshot.png" />
+              </foreignObject>
             </svg>
           </div>
-          <h1 className="text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-            FripeScan
-          </h1>
-          <p className="text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Scannez vos vêtements de seconde main et découvrez leur valeur grâce à l'IA
-          </p>
-        </header>
-
-        <section className="max-w-5xl mx-auto mb-24">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#F5F5F7] dark:bg-zinc-800 rounded-3xl p-10 hover:scale-105 transition-transform">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#215B87] to-[#e18343] flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Scannez</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                Prenez une photo de votre vêtement en quelques secondes
-              </p>
-            </div>
-
-            <div className="bg-[#F5F5F7] dark:bg-zinc-800 rounded-3xl p-10 hover:scale-105 transition-transform">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#215B87] to-[#e18343] flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Analysez</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                L'IA identifie la marque, le style et l'état du vêtement
-              </p>
-            </div>
-
-            <div className="bg-[#F5F5F7] dark:bg-zinc-800 rounded-3xl p-10 hover:scale-105 transition-transform">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#215B87] to-[#e18343] flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white">Évaluez</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                Obtenez une estimation de prix basée sur le marché
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="max-w-4xl mx-auto text-center mb-20">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Téléchargez l'application
-          </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
-            Disponible sur iOS et Android
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-[#215B87] to-[#e18343] text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all"
-            >
-              <svg className="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-              </svg>
-              App Store
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-[#215B87] to-[#e18343] text-white rounded-2xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all"
-            >
-              <svg className="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-              </svg>
-              Google Play
-            </a>
-          </div>
-        </section>
-
-        <footer className="text-center text-gray-500 dark:text-gray-500 pt-12 pb-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-lg">&copy; 2024 FripeScan. Tous droits réservés.</p>
-        </footer>
+        </div>
       </div>
     </div>
-  );
+     <div id="downloads"><AppCTA /></div>
+         <Stats />
+
+        <div id="fonctionnalites"><Fonctionnalites /></div> 
+        <div id="tarifs"><Tarifs /></div>
+        <Avis />
+    <div id="faq"> <FAQ /> </div>
+    <div id="contact"><Contact /></div>
+    <Footer />
+   
+    </>
+  )
 }

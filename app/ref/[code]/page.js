@@ -26,9 +26,9 @@ export default function ReferralPage() {
 
   const handleDownload = (platform) => {
     if (platform === 'ios') {
-      window.location.href = 'https://apps.apple.com/app/fripescan';
+      window.location.href = 'https://apps.apple.com/app/fripescan/id6738286206';
     } else if (platform === 'android') {
-      window.location.href = 'https://play.google.com/store/apps/details?id=com.fripescan';
+      window.location.href = 'https://play.google.com/store/apps/details?id=com.fripescan.mobile';
     }
   };
 

@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "pricing": "Tarifs",
+    "blog": "Blog"
+  },
+  "home": {
+    "title": "FripeScan",
+    "subtitle": "Scannez vos vêtements de seconde main et découvrez leur valeur grâce à l'IA",
+    "stats": {
+      "scans": "Scans réalisés",
+      "users": "Utilisateurs actifs",
+      "rating": "Note moyenne"
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "scan": {
+        "title": "Scannez",
+        "description": "Prenez une photo de votre vêtement en quelques secondes"
+      },
+      "analyze": {
+        "title": "Analysez",
+        "description": "L'IA identifie la marque, le style et l'état du vêtement"
+      },
+      "evaluate": {
+        "title": "Évaluez",
+        "description": "Obtenez une estimation de prix basée sur le marché"
+      }
+    },
+    "appScreenshots": {
+      "title": "L'application en images",
+      "scanner": {
+        "title": "Scanner intelligent",
+        "description": "Prenez une photo et obtenez une analyse instantanée",
+        "label": "Scannez vos vêtements"
+      },
+      "analysis": {
+        "title": "Analyse complète",
+        "description": "Marque, état, estimation de prix et conseils",
+        "label": "Résultats détaillés"
+      },
+      "history": {
+        "title": "Suivi facile",
+        "description": "Retrouvez tous vos scans et statistiques",
+        "label": "Historique de vos scans"
+      }
+    },
+    "testimonials": {
+      "title": "Ce que disent nos utilisateurs",
+      "marie": {
+        "name": "Marie L.",
+        "role": "Vendeuse Vinted",
+        "quote": "Super app ! J'estime mes fripes en quelques secondes avant de les mettre en vente. Gain de temps énorme !"
+      },
+      "thomas": {
+        "name": "Thomas B.",
+        "role": "Chineur vintage",
+        "quote": "L'IA reconnaît même les marques rares ! Parfait pour dénicher les bonnes affaires en friperie."
+      },
+      "sophie": {
+        "name": "Sophie D.",
+        "role": "Passionnée mode",
+        "quote": "Interface intuitive et résultats rapides. Le programme de parrainage est top, j'ai déjà gagné plein de scans !"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": {
+        "question": "Comment fonctionne FripeScan ?",
+        "answer": "Prenez simplement une photo de votre vêtement avec l'application. Notre intelligence artificielle analyse la marque, le style, l'état et les prix du marché pour vous donner une estimation instantanée."
+      },
+      "q2": {
+        "question": "L'application est-elle gratuite ?",
+        "answer": "Oui ! Vous bénéficiez de 3 scans gratuits par semaine. Pour des scans illimités et des fonctionnalités avancées, passez à Premium pour seulement 4,99€/mois."
+      },
+      "q3": {
+        "question": "Quels types de vêtements puis-je scanner ?",
+        "answer": "Tous types de vêtements : t-shirts, jeans, robes, vestes, chaussures, accessoires... Notre IA reconnaît des milliers de marques et styles différents."
+      },
+      "q4": {
+        "question": "Comment obtenir des scans bonus ?",
+        "answer": "Parrainez vos amis ! Chaque fois qu'un ami s'inscrit avec votre code, vous recevez tous les deux 5 scans bonus gratuits. Les scans bonus n'expirent jamais."
+      },
+      "q5": {
+        "question": "Les estimations sont-elles fiables ?",
+        "answer": "Notre IA est entraînée sur des milliers de vêtements et analyse les prix du marché en temps réel. Les estimations sont indicatives et vous aident à fixer un prix juste pour vos articles."
+      }
+    },
+    "download": {
+      "title": "Téléchargez l'application",
+      "subtitle": "Disponible sur iOS et Android",
+      "appStore": "App Store",
+      "googlePlay": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "Scannez et évaluez vos vêtements de seconde main grâce à l'intelligence artificielle.",
+    "legal": "Légal",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "mentions": "Mentions légales",
+    "contact": "Contact",
+    "rights": "Tous droits réservés."
+  }
+}

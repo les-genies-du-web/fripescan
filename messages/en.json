@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "pricing": "Pricing",
+    "blog": "Blog"
+  },
+  "home": {
+    "title": "FripeScan",
+    "subtitle": "Scan your second-hand clothes and discover their value with AI",
+    "stats": {
+      "scans": "Scans completed",
+      "users": "Active users",
+      "rating": "Average rating"
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "scan": {
+        "title": "Scan",
+        "description": "Take a photo of your garment in seconds"
+      },
+      "analyze": {
+        "title": "Analyze",
+        "description": "AI identifies the brand, style and condition of the garment"
+      },
+      "evaluate": {
+        "title": "Evaluate",
+        "description": "Get a market-based price estimate"
+      }
+    },
+    "appScreenshots": {
+      "title": "The app in pictures",
+      "scanner": {
+        "title": "Smart scanner",
+        "description": "Take a photo and get instant analysis",
+        "label": "Scan your clothes"
+      },
+      "analysis": {
+        "title": "Complete analysis",
+        "description": "Brand, condition, price estimate and advice",
+        "label": "Detailed results"
+      },
+      "history": {
+        "title": "Easy tracking",
+        "description": "Find all your scans and statistics",
+        "label": "Your scan history"
+      }
+    },
+    "testimonials": {
+      "title": "What our users say",
+      "marie": {
+        "name": "Marie L.",
+        "role": "Vinted Seller",
+        "quote": "Great app! I estimate my second-hand clothes in seconds before listing them. Huge time saver!"
+      },
+      "thomas": {
+        "name": "Thomas B.",
+        "role": "Vintage Hunter",
+        "quote": "The AI even recognizes rare brands! Perfect for finding great deals at thrift stores."
+      },
+      "sophie": {
+        "name": "Sophie D.",
+        "role": "Fashion Enthusiast",
+        "quote": "Intuitive interface and fast results. The referral program is great, I've already earned lots of scans!"
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": {
+        "question": "How does FripeScan work?",
+        "answer": "Simply take a photo of your garment with the app. Our artificial intelligence analyzes the brand, style, condition and market prices to give you an instant estimate."
+      },
+      "q2": {
+        "question": "Is the app free?",
+        "answer": "Yes! You get 3 free scans per week. For unlimited scans and advanced features, upgrade to Premium for only €4.99/month."
+      },
+      "q3": {
+        "question": "What types of clothes can I scan?",
+        "answer": "All types of clothing: t-shirts, jeans, dresses, jackets, shoes, accessories... Our AI recognizes thousands of different brands and styles."
+      },
+      "q4": {
+        "question": "How do I get bonus scans?",
+        "answer": "Refer your friends! Every time a friend signs up with your code, you both receive 5 free bonus scans. Bonus scans never expire."
+      },
+      "q5": {
+        "question": "Are the estimates reliable?",
+        "answer": "Our AI is trained on thousands of garments and analyzes market prices in real time. Estimates are indicative and help you set a fair price for your items."
+      }
+    },
+    "download": {
+      "title": "Download the app",
+      "subtitle": "Available on iOS and Android",
+      "appStore": "App Store",
+      "googlePlay": "Google Play"
+    }
+  },
+  "footer": {
+    "description": "Scan and evaluate your second-hand clothes with artificial intelligence.",
+    "legal": "Legal",
+    "terms": "Terms of use",
+    "privacy": "Privacy policy",
+    "mentions": "Legal notice",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
