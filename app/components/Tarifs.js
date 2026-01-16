@@ -1,53 +1,46 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 
 const frequencies = [
-  { value: 'monthly', label: 'Monthly', priceSuffix: '/month' },
-  { value: 'annually', label: 'Annually', priceSuffix: '/year' },
+  { value: 'monthly', label: 'Mensuel', priceSuffix: '/mois' },
+  { value: 'annually', label: 'Annuel', priceSuffix: '/an' },
 ]
 const tiers = [
   {
-    name: 'Freelancer',
-    id: 'tier-freelancer',
-    href: '#',
-    price: { monthly: '$19', annually: '$199' },
-    description: 'The essentials to provide your best work for clients.',
-    features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', '48-hour support response time'],
-    featured: false,
-    cta: 'Buy plan',
-  },
-  {
-    name: 'Startup',
-    id: 'tier-startup',
-    href: '#',
-    price: { monthly: '$29', annually: '$299' },
-    description: 'A plan that scales with your rapidly growing business.',
+    name: 'Gratuit',
+    id: 'tier-gratuit',
+    href: 'https://apps.apple.com/app/fripescan/id6738286206',
+    price: { monthly: '0€', annually: '0€' },
+    description: 'Idéal pour tester et vendre occasionnellement',
     features: [
-      '25 products',
-      'Up to 10,000 subscribers',
-      'Advanced analytics',
-      '24-hour support response time',
-      'Marketing automations',
+      '3 scans par semaine',
+      'Analyse IA des vêtements', 
+      'Estimation de prix basée sur le marché',
+      'Historique des 30 derniers scans',
+      'Programme de parrainage (5 scans bonus/ami)'
     ],
     featured: false,
-    cta: 'Buy plan',
+    cta: 'Commencer gratuitement',
   },
   {
-    name: 'Enterprise',
-    id: 'tier-enterprise',
-    href: '#',
-    price: 'Custom',
-    description: 'Dedicated support and infrastructure for your company.',
+    name: 'Premium',
+    id: 'tier-premium',
+    href: 'https://apps.apple.com/app/fripescan/id6738286206',
+    price: { monthly: '4,99€', annually: '49,99€' },
+    description: 'Pour les vendeurs sérieux qui veulent maximiser leurs revenus',
+    badge: 'Économisez 10€/an',
     features: [
-      'Unlimited products',
-      'Unlimited subscribers',
-      'Advanced analytics',
-      '1-hour, dedicated support response time',
-      'Marketing automations',
-      'Custom reporting tools',
+      'Scans illimités - vendez sans limite',
+      'Analyse IA avancée avec détection des défauts',
+      'Estimations ultra-précises (+15% de précision)',
+      'Historique illimité avec statistiques de vente',
+      'Export PDF professionnel pour vos annonces',
+      'Publication automatique multi-plateformes',
+      'Support prioritaire (réponse en 2h)',
+      'Accès anticipé aux nouvelles fonctionnalités'
     ],
     featured: true,
-    cta: 'Contact sales',
-  },
+    cta: 'Essayer Premium 7 jours gratuits',
+  }
 ]
 
 function classNames(...classes) {
@@ -56,93 +49,65 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <form className="group/tiers bg-gray-900 py-24 sm:py-32">
+    <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-400">Pricing</h2>
-          <p className="mt-2 text-5xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
-            Pricing that grows with you
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#2558A5]/10 to-[#E1AC42]/10 px-4 py-2 mb-4">
+            <span className="text-sm font-bold text-[#2558A5]">💰 Tarifs Simples</span>
+          </div>
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Investissez <span className="bg-gradient-to-r from-[#2558A5] to-[#E1AC42] bg-clip-text text-transparent">4,99€</span>, gagnez <span className="text-[#E1AC42]">150€/mois</span>
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            Commencez gratuitement. Passez Premium quand vous êtes prêt. <span className="font-semibold text-green-600">Garantie 30 jours</span>
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
-          Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer
-          loyalty, and driving sales.
-        </p>
-        <div className="mt-16 flex justify-center">
-          <fieldset aria-label="Payment frequency">
-            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs/5 font-semibold inset-ring inset-ring-white/10">
-              <label className="group relative rounded-full px-2.5 py-1 has-checked:bg-indigo-500">
-                <input
-                  defaultValue="monthly"
-                  defaultChecked
-                  name="frequency"
-                  type="radio"
-                  className="absolute inset-0 appearance-none rounded-full"
-                />
-                <span className="text-gray-400 group-has-checked:text-white">Monthly</span>
-              </label>
-              <label className="group relative rounded-full px-2.5 py-1 has-checked:bg-indigo-500">
-                <input
-                  defaultValue="annually"
-                  name="frequency"
-                  type="radio"
-                  className="absolute inset-0 appearance-none rounded-full"
-                />
-                <span className="text-gray-400 group-has-checked:text-white">Annually</span>
-              </label>
-            </div>
-          </fieldset>
-        </div>
-        <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="isolate mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2">
           {tiers.map((tier) => (
             <div
               key={tier.id}
               data-featured={tier.featured ? 'true' : undefined}
-              className="group/tier rounded-3xl bg-gray-800/50 p-8 ring-1 ring-white/10 data-featured:ring-2 data-featured:ring-indigo-500 xl:p-10"
+              className="group/tier relative rounded-2xl bg-white border-2 border-gray-200 p-6 data-featured:border-[#2558A5] data-featured:shadow-xl data-featured:scale-105 hover:shadow-lg transition-all duration-300 xl:p-8"
             >
-              <h3
-                id={`tier-${tier.id}`}
-                className="text-lg/8 font-semibold text-white group-data-featured/tier:text-indigo-400"
-              >
-                {tier.name}
-              </h3>
-              <p className="mt-4 text-sm/6 text-gray-300">{tier.description}</p>
-              {typeof tier.price === 'string' ? (
-                <p className="mt-6 text-4xl font-semibold tracking-tight text-white">{tier.price}</p>
-              ) : (
-                <>
-                  <p className="mt-6 flex items-baseline gap-x-1 group-not-has-[[name=frequency][value=monthly]:checked]/tiers:hidden">
-                    <span className="text-4xl font-semibold tracking-tight text-white">{tier.price.monthly}</span>
-                    <span className="text-sm/6 font-semibold text-gray-400 group-data-featured/tier:text-gray-300">
-                      /month
-                    </span>
-                  </p>
-                  <p className="mt-6 flex items-baseline gap-x-1 group-not-has-[[name=frequency][value=annually]:checked]/tiers:hidden">
-                    <span className="text-4xl font-semibold tracking-tight text-white">{tier.price.annually}</span>
-                    <span className="text-sm/6 font-semibold text-gray-400 group-data-featured/tier:text-gray-300">
-                      /year
-                    </span>
-                  </p>
-                </>
+              {tier.featured && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="inline-flex items-center rounded-full bg-gradient-to-r from-[#2558A5] to-[#E1AC42] px-4 py-1.5 text-xs font-bold text-white shadow-lg">
+                    ⭐ POPULAIRE
+                  </span>
+                </div>
               )}
+              <div className="flex items-center justify-between">
+                <h3
+                  id={`tier-${tier.id}`}
+                  className="text-2xl font-bold text-gray-900 group-data-featured/tier:text-[#2558A5]"
+                >
+                  {tier.name}
+                </h3>
+              </div>
+              <p className="mt-2 text-sm text-gray-600">{tier.description}</p>
+              <div className="mt-6 flex items-baseline gap-x-2">
+                <span className="text-5xl font-bold tracking-tight text-gray-900">{typeof tier.price === 'string' ? tier.price : tier.price.monthly}</span>
+                {typeof tier.price !== 'string' && (
+                  <span className="text-lg font-semibold text-gray-500">/mois</span>
+                )}
+              </div>
 
-              <button
-                value={tier.id}
-                name="tier"
-                type="submit"
-                aria-describedby={`tier-${tier.id}`}
-                className="mt-6 block w-full rounded-md bg-indigo-500 px-3 py-2 text-center text-sm/6 font-semibold text-white group-data-featured/tier:bg-white/10 group-data-featured/tier:inset-ring group-data-featured/tier:inset-ring-white/5 hover:bg-indigo-400 group-data-featured/tier:hover:bg-white/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 group-data-featured/tier:focus-visible:outline-white/75"
+              <a
+                href={tier.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 block w-full rounded-full bg-gradient-to-r from-gray-900 to-gray-800 px-6 py-3 text-center text-sm font-bold text-white group-data-featured/tier:from-[#2558A5] group-data-featured/tier:to-[#1e4785] hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 {tier.cta}
-              </button>
-              <ul role="list" className="mt-8 space-y-3 text-sm/6 text-gray-300 xl:mt-10">
+              </a>
+              <ul role="list" className="mt-6 space-y-2.5 text-sm text-gray-700">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
+                  <li key={feature} className="flex gap-x-3 items-start">
                     <CheckIcon
                       aria-hidden="true"
-                      className={classNames(tier.featured ? 'text-indigo-400' : 'text-indigo-400', 'h-6 w-5 flex-none')}
+                      className={classNames(tier.featured ? 'text-[#2558A5]' : 'text-green-500', 'h-5 w-5 flex-none mt-0.5')}
                     />
-                    {feature}
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -150,6 +115,6 @@ export default function Example() {
           ))}
         </div>
       </div>
-    </form>
+    </div>
   )
 }

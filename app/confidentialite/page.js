@@ -1,15 +1,26 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
 export default function PrivacyPage() {
+  const router = useRouter()
+  
+  useEffect(() => {
+    router.replace('/legal/privacy')
+  }, [router])
+
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-900 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <a href="/" className="text-[#215B87] hover:text-[#e18343] transition-colors">
+          <a href="/" className="text-[#2558A5] hover:text-[#E1AC42] transition-colors">
             ← Retour à l'accueil
           </a>
         </div>
 
         <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
-          Politique de Confidentialité
+          Redirection en cours...
         </h1>
 
         <div className="prose prose-lg dark:prose-invert max-w-none">

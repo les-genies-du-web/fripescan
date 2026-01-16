@@ -19,8 +19,8 @@ export default function LanguageSwitcher() {
         onClick={() => switchLanguage('fr')}
         className={`px-3 py-1 rounded-lg font-semibold transition-all ${
           locale === 'fr'
-            ? 'bg-gradient-to-r from-[#215B87] to-[#e18343] text-white'
-            : 'text-gray-600 hover:text-[#215B87]'
+            ? 'bg-gradient-to-r from-[#2558A5] to-[#E1AC42] text-white'
+            : 'text-gray-600 hover:text-[#2558A5]'
         }`}
       >
         FR
@@ -29,8 +29,8 @@ export default function LanguageSwitcher() {
         onClick={() => switchLanguage('en')}
         className={`px-3 py-1 rounded-lg font-semibold transition-all ${
           locale === 'en'
-            ? 'bg-gradient-to-r from-[#215B87] to-[#e18343] text-white'
-            : 'text-gray-600 hover:text-[#215B87]'
+            ? 'bg-gradient-to-r from-[#2558A5] to-[#E1AC42] text-white'
+            : 'text-gray-600 hover:text-[#2558A5]'
         }`}
       >
         EN

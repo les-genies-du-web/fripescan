@@ -2,40 +2,39 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 
 const features = [
   {
-    name: 'Invite team members',
-    description: 'Rerum repellat labore necessitatibus reprehenderit molestiae praesentium.',
+    name: 'Scan intelligent',
+    description: 'Prenez une photo de votre vêtement et notre IA l\'analyse instantanément.',
   },
-  { name: 'List view', description: 'Corporis asperiores ea nulla temporibus asperiores non tempore assumenda aut.' },
+  { name: 'Estimation de prix', description: 'Obtenez une estimation précise basée sur les prix du marché actuels.' },
   {
-    name: 'Keyboard shortcuts',
-    description: 'In sit qui aliquid deleniti et. Ad nobis sunt omnis. Quo sapiente dicta laboriosam.',
+    name: 'Reconnaissance de marques',
+    description: 'Notre IA reconnaît des centaines de marques et styles différents.',
   },
-  { name: 'Calendars', description: 'Sed rerum sunt dignissimos ullam. Iusto iure occaecati voluptate eligendi.' },
-  { name: 'Notifications', description: 'Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.' },
-  { name: 'Boards', description: 'Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.' },
-  { name: 'Reporting', description: 'Eos laudantium repellat sed architecto earum unde incidunt.' },
-  { name: 'Mobile app', description: 'Nulla est saepe accusamus nostrum est est fugit omnis.' },
+  { name: 'Historique des scans', description: 'Consultez tous vos scans précédents et suivez l\'évolution des prix.' },
+  { name: 'Publication rapide', description: 'Publiez directement vos annonces sur les plateformes de seconde main.' },
+  { name: 'Programme de parrainage', description: 'Gagnez des scans bonus en invitant vos amis.' },
+  { name: 'Mode hors ligne', description: 'Scannez même sans connexion internet.' },
+  { name: 'Application mobile', description: 'Disponible sur iOS et Android pour scanner partout.' },
 ]
 
 export default function Example() {
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
+    <div className="bg-gray-50 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-5">
           <div className="col-span-2">
-            <h2 className="text-base/7 font-semibold text-indigo-400">Everything you need</h2>
-            <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">
-              All-in-one platform
+            <h2 className="text-base/7 font-semibold text-indigo-400">Toutes les fonctionnalités</h2>
+            <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+              L'assistant IA pour vos fripes
             </p>
-            <p className="mt-6 text-base/7 text-gray-300">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste
-              dolor cupiditate blanditiis ratione.
+            <p className="mt-6 text-base/7 text-gray-600">
+              Scannez, estimez et publiez vos vêtements en quelques secondes avec notre intelligence artificielle.
             </p>
           </div>
-          <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-400 sm:grid-cols-2 lg:gap-y-16">
+          <dl className="col-span-3 grid grid-cols-1 gap-x-8 gap-y-10 text-base/7 text-gray-600 sm:grid-cols-2 lg:gap-y-16">
             {features.map((feature) => (
               <div key={feature.name} className="relative pl-9">
-                <dt className="font-semibold text-white">
+                <dt className="font-semibold text-gray-900">
                   <CheckIcon aria-hidden="true" className="absolute top-1 left-0 size-5 text-indigo-400" />
                   {feature.name}
                 </dt>

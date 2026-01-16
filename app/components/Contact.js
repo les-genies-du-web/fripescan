@@ -1,6 +1,6 @@
 export default function Example() {
   return (
-    <div className="relative isolate bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
+    <div className="relative isolate bg-white py-24 sm:py-32 lg:px-8">
       <svg
         aria-hidden="true"
         className="absolute inset-0 -z-10 size-full mask-[radial-gradient(100%_100%_at_top_right,white,transparent)] stroke-white/10"
@@ -26,17 +26,17 @@ export default function Example() {
         <rect fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" width="100%" height="100%" strokeWidth={0} />
       </svg>
       <div className="mx-auto max-w-xl lg:max-w-4xl">
-        <h2 className="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">
+        <h2 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
           Let’s talk about your project
         </h2>
-        <p className="mt-2 text-lg/8 text-gray-400">
+        <p className="mt-2 text-lg/8 text-gray-600">
           We help companies and individuals build out their brand guidelines.
         </p>
         <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
           <form action="#" method="POST" className="lg:flex-auto">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="first-name" className="block text-sm/6 font-semibold text-white">
+                <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">
                   First name
                 </label>
                 <div className="mt-2.5">
@@ -45,12 +45,12 @@ export default function Example() {
                     name="first-name"
                     type="text"
                     autoComplete="given-name"
-                    className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 backdrop-blur-sm placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                    className="block w-full rounded-md bg-white border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-500 focus:border-[#2558A5] focus:ring-2 focus:ring-[#2558A5]"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="last-name" className="block text-sm/6 font-semibold text-white">
+                <label htmlFor="last-name" className="block text-sm/6 font-semibold text-gray-900">
                   Last name
                 </label>
                 <div className="mt-2.5">
@@ -59,12 +59,12 @@ export default function Example() {
                     name="last-name"
                     type="text"
                     autoComplete="family-name"
-                    className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 backdrop-blur-sm placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                    className="block w-full rounded-md bg-white border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-500 focus:border-[#2558A5] focus:ring-2 focus:ring-[#2558A5]"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="budget" className="block text-sm/6 font-semibold text-white">
+                <label htmlFor="budget" className="block text-sm/6 font-semibold text-gray-900">
                   Budget
                 </label>
                 <div className="mt-2.5">
@@ -72,12 +72,12 @@ export default function Example() {
                     id="budget"
                     name="budget"
                     type="text"
-                    className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 backdrop-blur-sm placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                    className="block w-full rounded-md bg-white border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-500 focus:border-[#2558A5] focus:ring-2 focus:ring-[#2558A5]"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="website" className="block text-sm/6 font-semibold text-white">
+                <label htmlFor="website" className="block text-sm/6 font-semibold text-gray-900">
                   Website
                 </label>
                 <div className="mt-2.5">
@@ -85,12 +85,12 @@ export default function Example() {
                     id="website"
                     name="website"
                     type="url"
-                    className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 backdrop-blur-sm placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                    className="block w-full rounded-md bg-white border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-500 focus:border-[#2558A5] focus:ring-2 focus:ring-[#2558A5]"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm/6 font-semibold text-white">
+                <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
                   Message
                 </label>
                 <div className="mt-2.5">
@@ -98,7 +98,7 @@ export default function Example() {
                     id="message"
                     name="message"
                     rows={4}
-                    className="block w-full rounded-md bg-white/5 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 backdrop-blur-sm placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500"
+                    className="block w-full rounded-md bg-white border border-gray-300 px-3.5 py-2 text-base text-gray-900 placeholder:text-gray-500 focus:border-[#2558A5] focus:ring-2 focus:ring-[#2558A5]"
                     defaultValue={''}
                   />
                 </div>

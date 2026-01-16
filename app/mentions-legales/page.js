@@ -1,15 +1,26 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
 export default function MentionsLegalesPage() {
+  const router = useRouter()
+  
+  useEffect(() => {
+    router.replace('/legal/mentions')
+  }, [router])
+
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-900 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <a href="/" className="text-[#215B87] hover:text-[#e18343] transition-colors">
+          <a href="/" className="text-[#2558A5] hover:text-[#E1AC42] transition-colors">
             ← Retour à l'accueil
           </a>
         </div>
 
         <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">
-          Mentions Légales
+          Redirection en cours...
         </h1>
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -88,7 +99,7 @@ export default function MentionsLegalesPage() {
             <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">6. Données personnelles</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Pour toute information concernant la collecte et le traitement de vos données personnelles, veuillez consulter notre{' '}
-              <a href="/confidentialite" className="text-[#215B87] hover:text-[#e18343] underline">
+              <a href="/confidentialite" className="text-[#2558A5] hover:text-[#E1AC42] underline">
                 Politique de Confidentialité
               </a>.
             </p>
@@ -143,7 +154,7 @@ export default function MentionsLegalesPage() {
               <li className="mb-2"><strong>CNPM - Médiation de la consommation</strong></li>
               <li className="mb-2">27 avenue de la Libération</li>
               <li className="mb-2">42400 Saint-Chamond</li>
-              <li className="mb-2">Site web : <a href="https://cnpm-mediation-consommation.eu" target="_blank" rel="noopener noreferrer" className="text-[#215B87] hover:text-[#e18343] underline">cnpm-mediation-consommation.eu</a></li>
+              <li className="mb-2">Site web : <a href="https://cnpm-mediation-consommation.eu" target="_blank" rel="noopener noreferrer" className="text-[#2558A5] hover:text-[#E1AC42] underline">cnpm-mediation-consommation.eu</a></li>
             </ul>
           </section>
 
